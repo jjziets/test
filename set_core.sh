@@ -35,7 +35,7 @@ then
 fi
 
 # Read a numerical command line arg between 40 and 100
-if [ "$1" -eq "$1" ] 2>/dev/null && [ "0$1" -ge "40" ]  && [ "0$1" -le "100" ]
+if [ "$1" -eq "$1" ] 2>/dev/null && [ "0$1" -ge "0" ]  && [ "0$1" -le "1000" ]
 then
     $SMI -pm 1 # enable persistance mode
     speed=$1   # set speed
@@ -78,5 +78,5 @@ then
     echo "Complete"; exit 0;
 
 else
-    echo "Error: Please pick a fan speed between 40 and 100, or stop."; exit 1;
+    echo "Error: Please pick a core off set speed between 0 and 500, or stop."; exit 1;
 fi
