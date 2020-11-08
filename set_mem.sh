@@ -34,8 +34,8 @@ then
     echo "Error: Current driver version is ${VER}. Driver version must be greater than 285."; exit 1;
 fi
 
-# Read a numerical command line arg between 40 and 100
-if [ "$1" -eq "$1" ] 2>/dev/null && [ "0$1" -ge "40" ]  && [ "0$1" -le "100" ]
+# Read a numerical command line arg between 0 and 2000
+if [ "$1" -eq "$1" ] 2>/dev/null && [ "0$1" -ge "0" ]  && [ "0$1" -le "2000" ]
 then
     $SMI -pm 1 # enable persistance mode
     speed=$1   # set speed
@@ -78,5 +78,5 @@ then
     echo "Complete"; exit 0;
 
 else
-    echo "Error: Please pick a fan speed between 40 and 100, or stop."; exit 1;
+    echo "Error: Please pick a Memory Offset Clock speed between 0 and 2000, or stop."; exit 1;
 fi
