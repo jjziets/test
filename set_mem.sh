@@ -50,7 +50,8 @@ then
     while [  $n -lt  $NUMGPU ];
     do
         # start an x session, and call nvidia-settings to enable fan control and set speed
-        xinit ${SET} -a  [gpu:${n}]/GPUMemoryTransferRateOffset[4]=$speed --  :0 -once
+        xinit ${SET} -a  [gpu:${n}]/GPUMemoryTransferRateOffset[2]=$speed -a  [gpu:${n}]/GPUMemoryTransferRateOffset[3]=$speed -a  [gpu:${n}]/GPUMemoryTransferRateOffset[4]=$speed --  :0 -once
+
 
         let n=n+1
     done
