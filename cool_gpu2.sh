@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# cool_gpu2.sh  This script will enable or disable fixed gpu fan speed on dual fan gpus. 
+# cool_gpu2.sh  This script will enable or disable fixed gpu fan speed on tripple fan gpus. 
 #
 # Description:  A script to control GPU fan speed on headless (non-X) linux nodes
 
