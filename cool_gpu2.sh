@@ -76,7 +76,9 @@ then
     while [  $n -lt  $NUMGPU ];
     do
         # start an x session, and call nvidia-settings to enable fan control and set speed
-        xinit ${SET} -a [gpu:${n}]/GPUFanControlState=0 --  :0 -once
+	let n0=n*2
+	let n1=n*2+1
+        xinit ${SET} -a [gpu:${n0}]/GPUFanControlState=0 -a [gpu:${n1}]/GPUFanControlState=0 --  :0 -once
         let n=n+1
     done
 
