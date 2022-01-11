@@ -57,7 +57,7 @@ then
 	let n0=n*2
 	let n1=n*2+1
 	let n2=n*2+2	
-        xinit ${SET} -a [gpu:${n}]/GPUFanControlState=1 -a [fan:${n0}]/GPUTargetFanSpeed=$speed  -a [fan:${n1}]/GPUTargetFanSpeed=$speed    --  :0 -once
+        xinit ${SET} -a [gpu:${n}]/GPUFanControlState=1 -a [fan:${n}]/GPUTargetFanSpeed=$speed -a [gpu:${n0}]/GPUFanControlState=1 -a [fan:${n0}]/GPUTargetFanSpeed=$speed -a [gpu:${n1}]/GPUFanControlState=1 -a [fan:${n1}]/GPUTargetFanSpeed=$speed    --  :0 -once
         let n=n+1
     done
 
