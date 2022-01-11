@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# cool_gpu2.sh  This script will enable or disable fixed gpu fan speed
+# cool_gpu.sh  This script will enable or disable fixed gpu fan speed
 #
 # Description:  A script to control GPU fan speed on headless (non-X) linux nodes
 
@@ -17,8 +17,10 @@
 # * xorg
 # * Coolbits enabled and empty config setting
 #     nvidia-xconfig -a --cool-bits=28 --allow-empty-initial-configuration
-
+# Run this command to install all the requirments 
+# sudo apt-get install libgtk-3-0 && sudo apt-get install xinit && sudo apt-get install xserver-xorg-core && sudo update-grub && sudo nvidia-xconfig -a --cool-bits=28 --allow-empty-initial-configuration --enable-all-gpus
 # You may have to run this as root or with sudo if the current user is not authorized to start X sessions.
+
 
 
 # Paths to the utilities we will need
