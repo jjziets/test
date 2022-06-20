@@ -61,7 +61,7 @@ then
 
 elif [ "x$1" = "xstop" ]
 then
-    $SMI -pm 0 # disable persistance mode
+    #$SMI -pm 0 # disable persistance mode
 
     echo "Enabling default auto fan control."
 
